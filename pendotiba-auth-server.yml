@@ -33,7 +33,7 @@ spring:
         url: jdbc:mysql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false&useTimezone=true&serverTimezone=UTC
         username: root
     jpa:
-        database-platform: org.hibernate.dialect.MySQLDialect
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
         generate-ddl: true
         hibernate:
             ddl-auto: create
