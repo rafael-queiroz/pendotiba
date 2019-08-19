@@ -26,7 +26,7 @@ spring:
         username: sa
     jpa:
         #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-        #database-platform: org.hibernate.dialect.SQLServerDialect
+        database-platform: org.hibernate.dialect.SQLServer2008Dialect
         generate-ddl: true
         hibernate:
             ddl-auto: update
