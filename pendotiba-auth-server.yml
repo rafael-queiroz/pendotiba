@@ -28,7 +28,7 @@ spring:
         data: classpath:/sql/data.sql
         driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
         password: 'Trixrio@'
-        platform: mysql
+        #platform: mysql
         schema: classpath:/sql/schema.sql
         url: jdbc:sqlserver://localhost;databaseName=pendotiba_logic_bus;sendTimeAsDateTime=false
         username: sa
