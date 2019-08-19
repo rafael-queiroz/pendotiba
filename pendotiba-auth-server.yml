@@ -27,18 +27,14 @@ spring:
     datasource:
         data: classpath:/sql/data.sql
         driver-class-name: com.mysql.cj.jdbc.Driver
-        password: 'Trixrio@'
+        password: 'root'
         platform: mysql
         schema: classpath:/sql/schema.sql
-        url: jdbc:mysql://localhost/oauth?verifyServerCertificate=false&useSSL=false&requireSSL=false
+        url: jdbc:mysql://localhost/oauth?useTimezone=true&serverTimezone=UTC
         username: root
     jpa:
         database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-        generate-ddl: false
+        generate-ddl: true
         hibernate:
-            ddl-auto: none
-<<<<<<< HEAD
+            ddl-auto: update
         show-sql: true
-=======
-        show-sql: true
->>>>>>> becc960d2a84c2a96a812b529c66868fb16837e0
