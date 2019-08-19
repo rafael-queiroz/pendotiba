@@ -18,23 +18,23 @@ security:
         client:
             access-token-validity-seconds: 1800
             authorized-grant-types: password,refresh_token
-            client-id: angular
-            client-secret: $2a$10$.VCJHY5owObsgQo93jbRv.sPB1RuSIx22ib00TlFy4Rkl6IMbdr7K
+            client-id: coderef
+            client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
             resource-ids: resources
             scope: read,write
 
 spring:
     datasource:
         data: classpath:/sql/data.sql
-        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        driver-class-name: com.mysql.cj.jdbc.Driver
         password: 'Trixrio@'
-        #platform: mysql
+        platform: mysql
         schema: classpath:/sql/schema.sql
-        url: jdbc:sqlserver://localhost;databaseName=pendotiba_logic_bus;sendTimeAsDateTime=false
-        username: sa
+        url: jdbc:mysql://localhost/oauth?useTimezone=true&serverTimezone=UTC
+        username: root
     jpa:
-        database-platform: org.hibernate.dialect.SQLServer2012Dialect
-        generate-ddl: false
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        generate-ddl: true
         hibernate:
-            ddl-auto: none
+            ddl-auto: update
         show-sql: true
