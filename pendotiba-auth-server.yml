@@ -26,14 +26,17 @@ security:
 spring:
     datasource:
         data: classpath:/sql/data.sql
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        password: 'root'
+        #driver-class-name: com.mysql.cj.jdbc.Driver
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        password: 'sa'
         platform: mysql
         schema: classpath:/sql/schema.sql
-        url: jdbc:mysql://localhost/oauth?useTimezone=true&serverTimezone=UTC
-        username: root
+        #url: jdbc:mysql://localhost/oauth?useTimezone=true&serverTimezone=UTC
+        url: jdbc:sqlserver://localhost;databaseName=rq_garage
+        username: sa
     jpa:
-        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        database-platform: org.hibernate.dialect.SQLServerDialect
         generate-ddl: true
         hibernate:
             ddl-auto: update
