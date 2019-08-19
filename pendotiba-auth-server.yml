@@ -34,7 +34,7 @@ spring:
         username: root
     jpa:
         database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-        generate-ddl: true
+        generate-ddl: false
         hibernate:
-            ddl-auto: update
+            ddl-auto: none
         show-sql: true
