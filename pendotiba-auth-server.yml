@@ -34,7 +34,7 @@ spring:
             ddl-auto: none
         show-sql: true
     profiles:
-        active: basic-security
+        active: oauth-security
      
 logging:
     file: /logs/rq-security_novo.log
