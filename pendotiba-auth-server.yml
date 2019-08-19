@@ -1,5 +1,7 @@
 server:
   port: 9092
+  servlet:
+    context-path: /rq-security
 
 eureka:
   instance:
@@ -13,31 +15,21 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-security:
-    oauth2:
-        client:
-            access-token-validity-seconds: 1800
-            authorized-grant-types: password,refresh_token
-            client-id: coderef
-            client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
-            resource-ids: resources
-            scope: read,write
-
 spring:
     datasource:
-        data: classpath:/sql/data.sql
+        #data: classpath:/sql/data.sql
         #driver-class-name: com.mysql.cj.jdbc.Driver
         driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
         password: 'sa'
-        platform: mysql
-        schema: classpath:/sql/schema.sql
+        #platform: mysql
+        #schema: classpath:/sql/schema.sql
         #url: jdbc:mysql://localhost/oauth?useTimezone=true&serverTimezone=UTC
         url: jdbc:sqlserver://localhost;databaseName=rq_garage
         username: sa
     jpa:
         #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-        database-platform: org.hibernate.dialect.SQLServerDialect
-        generate-ddl: true
+        #database-platform: org.hibernate.dialect.SQLServerDialect
+        generate-ddl: false
         hibernate:
-            ddl-auto: update
+            ddl-auto: none
         show-sql: true
