@@ -22,7 +22,7 @@ spring:
         #platform: mysql
         #schema: classpath:/sql/schema.sql
         #url: jdbc:mysql://localhost/oauth?useTimezone=true&serverTimezone=UTC
-        url: jdbc:sqlserver://localhost;databaseName=pendotiba_logic_bus
+        url: jdbc:sqlserver://localhost;databaseName=rq_garage
         username: sa
     jpa:
         #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
