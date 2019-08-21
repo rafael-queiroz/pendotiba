@@ -22,7 +22,7 @@ spring:
         #platform: mysql
         #schema: classpath:/sql/schema.sql
         #url: jdbc:mysql://localhost/oauth?useTimezone=true&serverTimezone=UTC
-        url: jdbc:sqlserver://localhost;databaseName=rq_garage
+        url: jdbc:sqlserver://localhost;databaseName=pendotiba_logic_bus
         username: sa
     jpa:
         #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
@@ -32,7 +32,7 @@ spring:
             ddl-auto: update
         show-sql: true
     profiles:
-        active: oauth-security
+        active: basic-security
      
 logging:
     file: /logs/oauth-server.log
