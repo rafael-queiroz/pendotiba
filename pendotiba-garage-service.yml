@@ -15,13 +15,14 @@ eureka:
 
 spring:
     datasource:
-        driver-class-name: com.mysql.jdbc.Driver
-        password: '1234'
-        platform: mysql
-        url: jdbc:mysql://localhost/delivery-order?verifyServerCertificate=false&useSSL=false&requireSSL=false
-        username: root
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        password: 'sa'
+        #platform: mysql
+        #url: jdbc:mysql://localhost/delivery-order?verifyServerCertificate=false&useSSL=false&requireSSL=false
+        url: jdbc:mysql://localhost/pendotiba-garage
+        username: sa
     jpa:
-        database-platform: org.hibernate.dialect.MySQLDialect
+        database-platform: org.hibernate.dialect.SQLServer2008Dialect
         generate-ddl: false
         hibernate:
             ddl-auto: create
@@ -33,4 +34,4 @@ security:
   oauth2:
     resource:
       userInfoUri: ${authserver.hostname}/user
-      id: orders
+      id: garages
