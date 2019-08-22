@@ -19,7 +19,7 @@ spring:
         password: 'sa'
         #platform: mysql
         #url: jdbc:mysql://localhost/delivery-order?verifyServerCertificate=false&useSSL=false&requireSSL=false
-        url: jdbc:mysql://localhost/pendotiba-garage
+        url: jdbc:sqlserver://localhost;databaseName=pendotiba_logic_bus
         username: sa
     jpa:
         database-platform: org.hibernate.dialect.SQLServer2008Dialect
